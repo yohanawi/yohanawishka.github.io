@@ -12,23 +12,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* custom scroll bar */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #888;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
 /* all similar content styling codes */
 section {
     padding: 100px 0;
@@ -41,8 +24,8 @@ section {
 }
 
 .about,
+.experience,
 .services,
-.skills,
 .teams,
 .contact,
 footer {
@@ -50,6 +33,7 @@ footer {
 }
 
 .about .about-content,
+.experience-content,
 .services .serv-content,
 .skills .skills-content,
 .contact .contact-content {
@@ -248,8 +232,18 @@ section .title::after {
 }
 
 /* about section styling */
+.about {
+    background-color: #202020;
+    color: #ccc;
+}
+
+.about .title::before {
+    background: #ccc;
+}
+
 .about .title::after {
     content: "who i am";
+    background-color: #202020;
 }
 
 .about .about-content .left {
@@ -301,8 +295,8 @@ section .title::after {
 
 /* experince*/
 .experience {
-    color: #fff;
-    background-color: #111;
+    color: #ccc;
+    background-color: #202020;
 }
 
 .experience .title::before {
@@ -310,8 +304,8 @@ section .title::after {
 }
 
 .experience .title::after {
-    background: #111;
-    content: "what i provide";
+    background: #202020;
+    content: "what i provided";
 }
 
 .ex-container {
@@ -332,7 +326,7 @@ section .title::after {
 
 .ex-container .post {
     width: 300px;
-    background: #fff;
+    background: #ccc;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 3);
     margin: 0 auto;
     padding-bottom: 20px;
@@ -390,8 +384,8 @@ section .title::after {
 
 /* services section styling */
 .services {
-    color: #fff;
-    background: #111;
+    color: #ccc;
+    background: #2a2a2a;
 }
 
 .services .title::before {
@@ -399,8 +393,8 @@ section .title::after {
 }
 
 .services .title::after {
-    background: #111;
-    content: "what i provide";
+    background: #2a2a2a;
+    content: "what i expert in";
 }
 
 .services .serv-content {
@@ -484,71 +478,6 @@ section .title::after {
 
 .services .serv-content .card:hover>* {
     color: #fff;
-}
-
-/* education section styling */
-.education {
-    color: #fff;
-    background: #111;
-}
-
-.education .title::before {
-    background: #fff;
-}
-
-.education .title::after {
-    background: #111;
-    content: "what i provide";
-}
-
-.education .title::after {
-    content: "what i know";
-}
-
-.grid {
-    display: grid;
-    width: (50% - 30px);
-    grid-gap: 25px;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    align-items: start;
-}
-
-.grid-item {
-    background-color: #222;
-    overflow: hidden;
-    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    text-align: center;
-    border-radius: 6px;
-    padding: 50px 25px;
-    transition: all 0.3s ease;
-}
-
-.grid-item:hover {
-    transform: translateY(-0.5%);
-    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
-    background: crimson;
-}
-
-.card-img {
-    align-items: center;
-    width: 30%;
-    object-fit: cover;
-}
-
-.card-header {
-    font-size: 35px;
-    font-weight: 500;
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-.card-text {
-    font-size: 20px;
-    letter-spacing: 0.1rem;
-    line-height: 1.2;
-    color: #fff;
-    margin-bottom: 5px;
 }
 
 /* skills section styling */
@@ -654,103 +583,110 @@ section .title::after {
 }
 
 /* works section styling */
-
 .works {
-    color: #111;
-    background: #fff;
+    color: #ccc;
+    background: #2a2a2a;
 }
 
 .works .title::before {
-    background: #111;
+    background: #ccc;
 }
 
 .works .title::after {
-    background: #fff;
-    content: "what i provide";
+    background: #2a2a2a;
 }
 
 .works .title::after {
     content: "my example";
 }
 
-.works .carousel .card {
-    background: rgb(202, 199, 199);
-    border-radius: 6px;
-    padding: 25px 15px;
-    text-align: center;
-    overflow: hidden;
-    transition: all 0.3s ease;
+.wrow {
+    margin: 10px -16px;
 }
 
-.works .carousel .card:hover {
-    background: crimson;
+.wrow,
+.wrow>.column {
+    padding: 8px;
+
 }
 
-.works .carousel .card .box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
+.column {
+    float: left;
+    width: 25%;
+    display: none;
+
 }
 
-.works .carousel .card:hover .box {
-    transform: scale(1.05);
+.wrow:after {
+    content: "";
+    display: table;
+    clear: both;
+
 }
 
-.works .carousel .card .text {
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
+.wcontent {
+    background-color: white;
+    padding: 5px;
 }
 
-.works .carousel .card img {
-    height: 275px;
-    width: 500px;
+.wcontent video {
+    width: 100%;
     object-fit: cover;
-    border: 5px solid crimson;
-    transition: all 0.3s ease;
 }
 
-.works .carousel .card:hover img {
-    border-color: #fff;
+.wcontent:hover video {
+    transform: scale(1.1);
 }
 
-.works .carousel .card video {
-    width: 500px;
-    object-fit: cover;
-    border: 5px solid crimson;
-    transition: all 0.3s ease;
+.wcontent img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
 }
 
-.owl-dots {
+.wcontent:hover img {
+    transform: scale(1.1);
+}
+
+.wcontent .layer {
     text-align: center;
-    margin-top: 20px;
 }
 
-.owl-dot {
-    height: 13px;
-    width: 13px;
-    margin: 0 5px;
-    outline: none !important;
-    border-radius: 50%;
-    border: 2px solid crimson !important;
-    transition: all 0.3s ease;
+.show {
+    display: block;
 }
 
-.owl-dot.active {
-    width: 35px;
-    border-radius: 14px;
+.wbtn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: white;
+    cursor: pointer;
 }
 
-.owl-dot.active,
-.owl-dot:hover {
-    background: crimson !important;
+.wbtn:hover {
+    background-color: #ddd;
+}
+
+.wbtn.active {
+    background-color: #666;
+    color: white;
 }
 
 /* contact section styling */
+.contact {
+    color: #ccc;
+    background-color: #202020;
+}
+
+.contact .title::before {
+    background: #ccc;
+}
+
 .contact .title::after {
     content: "get in touch";
+    background: #202020;
 }
 
 .contact .contact-content .column {
@@ -768,7 +704,7 @@ section .title::after {
 }
 
 .contact .contact-content .left a {
-    color: #000000;
+    color: #fff;
 }
 
 .contact .contact-content .left a:hover {
@@ -791,7 +727,7 @@ section .title::after {
 
 .contact .contact-content .row i {
     font-size: 25px;
-    color: #000000;
+    color: #fff;
 }
 
 .contact .contact-content .info .head {
@@ -799,7 +735,7 @@ section .title::after {
 }
 
 .contact .contact-content .info .sub-title {
-    color: #333;
+    color: #ccc;
 }
 
 /*social*/
@@ -812,7 +748,7 @@ section .title::after {
 }
 
 .contact .brow a {
-    color: #000000;
+    color: #fff;
 }
 
 .contact .brow .social i {
@@ -830,7 +766,7 @@ section .title::after {
 }
 
 .contact .right a {
-    color: #000000;
+    color: #ccc;
     text-decoration: none;
 }
 
@@ -840,7 +776,7 @@ section .title::after {
 
 /* footer section styling */
 footer {
-    background: #111;
+    background: #2a2a2a;
     padding: 15px 23px;
     color: #fff;
     text-align: center;
