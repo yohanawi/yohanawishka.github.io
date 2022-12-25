@@ -333,7 +333,7 @@ section .title::after {
 }
 
 .ex-container .post .image img {
-    height: 250px;
+    height: auto;
     width: 100%;
     object-fit: cover;
 }
@@ -350,7 +350,7 @@ section .title::after {
 
 .ex-container .post .content .title1 {
     font-weight: 600;
-    font-size: 22px;
+    font-size: 19px;
     color: #333;
     text-transform: capitalize;
 }
@@ -360,7 +360,7 @@ section .title::after {
 }
 
 .ex-container .post .content p {
-    font-size: 14px;
+    font-size: 12px;
     padding: 5px 0;
     color: #666;
 }
