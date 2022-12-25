@@ -5,7 +5,7 @@ This is a Personal Portfolio Website
 
 ## Demo
 
-https://yohanawi.github.io/yohanawishka.github.io/
+https://yohanawishka.herokuapp.com/
 
 
 ## Support
