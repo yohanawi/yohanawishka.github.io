@@ -27,6 +27,7 @@ section {
 .experience,
 .services,
 .teams,
+.activity,
 .contact,
 footer {
     font-family: 'Poppins', sans-serif;
@@ -581,11 +582,30 @@ section .title::after {
 .skills-content .right .after::before {
     width: 50%;
 }
+/*coding activity*/
+.activity{
+    color: #ccc;
+    background: #2a2a2a;
+}
+.activity .title::before {
+    background: #ccc;
+}
 
+.activity .title::after {
+    background: #2a2a2a;
+}
+
+.activity .title::after {
+    content: "7 days activity";
+}
+.activity .activity-content{
+    width: 75%;
+    margin-left: 120px;
+}
 /* works section styling */
 .works {
     color: #ccc;
-    background: #2a2a2a;
+    background: #202020;
 }
 
 .works .title::before {
@@ -677,7 +697,7 @@ section .title::after {
 /* contact section styling */
 .contact {
     color: #ccc;
-    background-color: #202020;
+    background-color: #2a2a2a;
 }
 
 .contact .title::before {
@@ -776,7 +796,7 @@ section .title::after {
 
 /* footer section styling */
 footer {
-    background: #2a2a2a;
+    background: #202020;
     padding: 15px 23px;
     color: #fff;
     text-align: center;
