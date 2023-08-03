@@ -153,7 +153,7 @@
                                 <p>This is an app designed by Android Studio for a restaurant. Implemented as the
                                     Mobile Application Development module project. Version control for the project was
                                     done using GitHub.</p>
-                                <a href="#" class="btn-ex">learn more</a>
+                                <button class="btn-ex" data-name="p-1">learn more</button>
                             </div>
                         </div>
                     </div>
@@ -366,10 +366,10 @@
                 To: 'yohanawishka2000326@gmail.com',
                 From: document.getElementById("email").value,
                 Subject: "This is the subject",
-                Body: "Name: " +document.getElementById("name").value
-                + "<br> Email: " +document.getElementById("email").value
-                + "<br> Subject: " +document.getElementById("subject").value
-                + "<br> Message: " +document.getElementById("message").value
+                Body: "Name: " + document.getElementById("name").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Subject: " + document.getElementById("subject").value
+                    + "<br> Message: " + document.getElementById("message").value
             }).then(
                 message => alert("Message Sent Succesfully")
             );
