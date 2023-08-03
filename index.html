@@ -92,7 +92,8 @@
                                     Lakshman garden, Colombo road , Divulapitya</a></p>
                         </div>
                     </div>
-                    <a href="#" class="btn">Download CV</a>
+                    <a href="https://drive.google.com/file/d/1VS99QG8A-2sNGSAgkMWqOMKbR8cQLxXi/view?usp=sharing"
+                        class="btn">Download CV</a>
                 </div>
             </div>
         </div>
@@ -150,7 +151,7 @@
                                 <a href="https://github.com/yohanawi/Resturant_App.git" class="title1">Resturant App
                                     Project</a>
                                 <p>This is an app designed by Android Studio for a restaurant. Implemented as the
-                                    Mobile Application Development module project. Version control for the project was
+                                    Mobile Application Development module project. Version control for the project was
                                     done using GitHub.</p>
                                 <a href="#" class="btn-ex">learn more</a>
                             </div>
@@ -321,14 +322,14 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="">
+                    <form onsubmit="sendEmail(); reset(); return false;">
                         <div class="inputBox">
-                            <input type="text" placeholder="name">
-                            <input type="email" placeholder="email">
+                            <input type="text" id="name" placeholder="name">
+                            <input type="email" id="email" placeholder="email">
                         </div>
-                        <input type="text" placeholder="subject" class="box">
-                        <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
-                        <input type="submit" class="btn" value="send message">
+                        <input type="text" id="subject" placeholder="subject" class="box">
+                        <textarea id="message" placeholder="message" name="" id="" cols="30" rows="10"></textarea>
+                        <button type="submit" class="btn">send message</button>
                     </form>
                 </div>
             </div>
@@ -354,6 +355,26 @@
 
     <!-- typed.js link  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "yohanawishka2000326@gmail.com",
+                Password: "!AWishka##2016@18$42$%%",
+                To: 'yohanawishka2000326@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "This is the subject",
+                Body: "Name: " +document.getElementById("name").value
+                + "<br> Email: " +document.getElementById("email").value
+                + "<br> Subject: " +document.getElementById("subject").value
+                + "<br> Message: " +document.getElementById("message").value
+            }).then(
+                message => alert("Message Sent Succesfully")
+            );
+        } 
+    </script>
 
     <!-- particles.js links  -->
     <script src="Js/particles.min.js"></script>
