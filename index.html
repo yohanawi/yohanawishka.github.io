@@ -366,26 +366,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 
     <script>
-
-        let menu = document.querySelector('#menu-bars');
-        let header = document.querySelector('header');
-
-        menu.onclick = () => {
-            menu.classList.toggle('fa-times');
-            header.classList.toggle('active');
-        }
-
-        window.onscroll = () => {
-            menu.classList.remove('fa-times');
-            header.classList.remove('active');
-        };
-
-        var typed = new Typed('.typing-text', {
-            strings: ['front end developer', 'web designer', 'graphic designer', 'web developer'],
-            loop: true,
-            typeSpeed: 150
-        });
-
         VanillaTilt.init(document.querySelectorAll('.tilt'), {
             max: 25
         });
