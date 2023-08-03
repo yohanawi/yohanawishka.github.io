@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/YA (R).png">
+    <link rel="icon" href="Images/Logo.jpg">
     <title>Yohan Awishka</title>
-    <!-- css -->
-    <link rel="stylesheet" href="css.css">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <!-- Icon css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -18,13 +20,16 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
+    <!-- css -->
+    <link rel="stylesheet" href="Style.css">
+
 </head>
 
 <body>
-
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
     </div>
+
     <!--navigation bar-->
     <nav class="navbar">
         <div class="max-width">
@@ -44,6 +49,7 @@
 
     <!-- home section start -->
     <section class="home" id="home">
+        <div id="particles-js"></div>
         <div class="max-width">
             <div class="home-content">
                 <div class="text-1">Hello, my name is</div>
@@ -57,19 +63,35 @@
     <section class="about" id="about">
         <div class="max-width">
             <h2 class="title">About me</h2>
-            <div class="about-content">
-                <div class="column left">
-                    <img src="images/about-01.png" alt="">
+            <div class="row">
+                <div class="image">
+                    <img class="tilt" src="Images/1637650803784.jpg" alt="">
                 </div>
-                <div class="column right">
-                    <div class="text">I'm Yohan and I'm a <span class="typing-2"></span></div>
-                    <p>Hi!! My name is Yohan Awishka. I am an Information Technology Specializing in Information
-                        Technology student from Faculty of Computing, Sri Lanka Institute of Information Technology. I
-                        am highly motivated, hardworking, and creative undergraduate with skills. I aspire to become a
+                <div class="content">
+                    <h3> I'm Yohan and I'm a <span class="typing-2"></span> </h3>
+                    <p class="info">I am highly motivated, hardworking, and creative undergraduate with skills. I aspire
+                        to become a
                         Video editor, UI/UX Designer, Front developer and Designer as it is a combination more of my
-                        strongest abilities.</p>
-                    <a href="https://drive.google.com/file/d/1VS99QG8A-2sNGSAgkMWqOMKbR8cQLxXi/view?usp=sharing">Download
-                        CV</a>
+                        strongest abilities</p>
+                    <div class="box-container">
+                        <div class="box">
+                            <p> <span> age: </span> 23 </p>
+                            <p> <span> gender: </span> Male </p>
+                            <p> <span> experience : </span> 1 years </p>
+                            <p> <span> freelance : </span> available </p>
+                        </div>
+                        <div class="box">
+                            <p> <span> language : </span> Sinhala / English </p>
+                            <p> <span> phone : </span><a href="tel:+94 77-8638568">077-8638568</a> </p>
+                            <p> <span> email : </span> <a
+                                    href="https://mail.google.com/mail/u/0/#inbox?compose=new">yohanawishka2000326@gmail.com</a>
+                            </p>
+                            <p> <span> address : </span><a
+                                    href="https://www.google.lk/maps/@7.2214393,80.0168662,3a,75y,128.26h,94.17t/data=!3m6!1e1!3m4!1s_0or6x4u0BtY7PiFrHsoFA!2e0!7i16384!8i8192?hl=en&authuser=0">No-18,
+                                    Lakshman garden, Colombo road , Divulapitya</a></p>
+                        </div>
+                    </div>
+                    <a href="#" class="btn">download CV</a>
                 </div>
             </div>
         </div>
@@ -101,7 +123,7 @@
                         <span class="number">03</span>
                         <div class="box">
                             <i class="fas fa-code"></i>
-                            <div class="text">Coding</div>
+                            <div class="text">Web development</div>
                             <p>Android Studio.<br> Visual Stdio.</p>
                         </div>
                     </div>
@@ -129,6 +151,7 @@
                                 <p>This is an app design by android studio platform for small restaurant Implemented as
                                     the semester 4 Mobile Application Development module project. Version control for
                                     the project was done using GitHub. (JAVA, SQL)</p>
+                                <a href="#" class="btn">learn more</a>
                             </div>
                         </div>
                     </div>
@@ -140,9 +163,10 @@
                             <div class="content">
                                 <div class="date"><i class="fas fa-calendar-alt"></i> Aus, 2021</div>
                                 <a href="#" class="title1">School Web Application</a>
-                                <p>This is a web-application developed for a school management, Weragodamulla Collage,
-                                    minuwangoda. Implemented as the Semester 4 Information Technology Project module
+                                <p>This is a web-application for a school management. Implemented as the Semester 4
+                                    Information Technology Project module
                                     project (PHP, HTML, CSS, JavaScript, MySQL)</p>
+                                <a href="#" class="btn">learn more</a>
                             </div>
                         </div>
                     </div>
@@ -158,6 +182,7 @@
                                 <p>This is a web-application for a Hotel Management. Implemented as the Semester 5 IT
                                     Project Management module project. Version control for the project is done using
                                     GitHub. (PHP, HTML, CSS, Bootstrap, MYSQL)</p>
+                                <a href="#" class="btn">learn more</a>
                             </div>
                         </div>
                     </div>
@@ -173,6 +198,7 @@
                                 <p>This is a Sapu Fashion web-application for a Fashion center. Implemented as customer
                                     idea. Version control for the project is done using
                                     GitHub. (PHP, HTML, CSS, Bootstrap, MYSQL)</p>
+                                <a href="#" class="btn">learn more</a>
                             </div>
                         </div>
                     </div>
@@ -185,9 +211,10 @@
                                 <div class="date"><i class="fas fa-calendar-alt"></i> Oct, 2022</div>
                                 <a href="https://github.com/yohanawi/Call-center-system.git" class="title1">Call Center
                                     web application</a>
-                                <p>This is a call center web application. Implemented as internship project. Version
-                                    control for the project is done using
-                                    GitHub. (PHP, HTML, CSS, Bootstrap, MYSQL)</p>
+                                <br>This is a call center web application. Implemented as internship project. Version
+                                control for the project is done using
+                                GitHub. </br>b(PHP, HTML, CSS, Bootstrap, MYSQL)</p>
+                                <a href="#" class="btn">learn more</a>
                             </div>
                         </div>
                     </div>
@@ -195,117 +222,53 @@
             </div>
         </div>
     </section>
+
     <!--Activity chart-->
     <section class="activity" id="activity">
         <div class="max-width">
             <h2 class="title">My Coding Activity</h2>
             <div class="activity-content">
-            <figure>
-                <embed src="https://wakatime.com/share/@4b6bcf91-5342-41bf-aaee-5f9f41843821/a8ae4536-d833-46ca-873e-18b3f75efb39.svg"></embed>
-            </figure>
-        </div>
+                <figure>
+                    <embed
+                        src="https://wakatime.com/share/@4b6bcf91-5342-41bf-aaee-5f9f41843821/a8ae4536-d833-46ca-873e-18b3f75efb39.svg"></embed>
+                </figure>
+            </div>
         </div>
     </section>
+
     <!-- Works section start -->
     <section class="works" id="works">
         <div class="max-width">
             <h2 class="title">My work</h2>
-            <div id="workbtn">
-                <button class="wbtn active" onclick="filterSelection('all')"> Show all</button>
-                <button class="wbtn" onclick="filterSelection('web')"> Web</button>
-                <button class="wbtn" onclick="filterSelection('mobile')"> Mobile</button>
-                <button class="wbtn" onclick="filterSelection('video')"> video</button>
-            </div>
-            <div class="wrow">
-                <div class="column video">
-                    <div class="wcontent">
-                        <video autoplay muted loop id="myVideo">
-                            <source src="images/Neon Effect_1.mp4" type="video/mp4">
-                        </video>
-                        <div class="layer">
-                            <a href="#">
-                                <h3>Click Here</h3>
-                            </a>
-                        </div>
+
+            <div class="box-container">
+
+                <div class="box tilt">
+                    <video autoplay muted loop id="myVideo">
+                        <source src="images/Neon Effect_1.mp4" type="video/mp4">
+                    </video>
+                    <div class="layer">
+                        <a href="#" class="btn">learn more</a>
                     </div>
                 </div>
-                <div class="column video">
-                    <div class="wcontent">
-                        <video autoplay muted loop id="myVideo">
-                            <source src="images/side_1.mp4" type="video/mp4">
-                        </video>
-                        <div class="layer">
-                            <a href="#">
-                                <h3>Click Here</h3>
-                            </a>
-                        </div>
+                <div class="box tilt">
+                    <video autoplay muted loop id="myVideo">
+                        <source src="images/Neon Effect_1.mp4" type="video/mp4">
+                    </video>
+                    <div class="layer">
+                        <a href="#" class="btn">learn more</a>
                     </div>
                 </div>
-                <div class="column video">
-                    <div class="wcontent">
-                        <video autoplay muted loop id="myVideo">
-                            <source src="images/1_1.mp4" type="video/mp4">
-                        </video>
-                        <div class="layer">
-                            <a href="#">
-                                <h3>Click Here</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="column video">
-                    <div class="wcontent">
-                        <video autoplay muted loop id="myVideo">
-                            <source src="images/cgh.mp4" type="video/mp4">
-                        </video>
-                        <div class="layer">
-                            <a href="#">
-                                <h3>Click Here</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="column mobile">
-                    <div class="wcontent">
-                        <img src="images/R1.png" alt="mobile">
-                        <div class="layer">
-                            <a href="#">
-                                <h3>Click Here</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="column mobile">
-                    <div class="wcontent">
-                        <img src="images/calculator.jpg" alt="mobile">
-                        <div class="layer">
-                            <a href="#">
-                                <h3>Click Here</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="column web">
-                    <div class="wcontent">
-                        <img src="images/H1.png" alt="mobile">
-                        <div class="layer">
-                            <a href="#">
-                                <h3>Click Here</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="column web">
-                    <div class="wcontent">
-                        <img src="images/S1.png" alt="mobile">
-                        <div class="layer">
-                            <a href="#">
-                                <h3>Click Here</h3>
-                            </a>
-                        </div>
+                <div class="box tilt">
+                    <video autoplay muted loop id="myVideo">
+                        <source src="images/Neon Effect_1.mp4" type="video/mp4">
+                    </video>
+                    <div class="layer">
+                        <a href="#" class="btn">learn more</a>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
     <!-- contact section start -->
@@ -315,42 +278,11 @@
             <div class="contact-content">
                 <div class="column left">
                     <div class="text">Get in Touch</div>
-
-                    <div class="icons">
-                        <div class="row">
-                            <i class="fas fa-user"></i>
-                            <div class="info">
-                                <div class="head">Name</div>
-                                <div class="sub-title">Yohan Awishka Indrawansha</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="info">
-                                <div class="head">Address</div>
-                                <div class="sub-title"><a
-                                        href="https://www.google.lk/maps/@7.2214393,80.0168662,3a,75y,128.26h,94.17t/data=!3m6!1e1!3m4!1s_0or6x4u0BtY7PiFrHsoFA!2e0!7i16384!8i8192?hl=en&authuser=0">No-18,
-                                        Lakshman garden, Colombo road , Divulapitya</a></div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <i class="fas fa-phone-alt"></i>
-                            <div class="info">
-                                <div class="head">Phone</div>
-                                <div class="sub-title"><a href="tel:+94 77-8638568">077-8638568</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column right">
-                    <div class="text">Message me</div>
                     <div class="row">
-                        <i class="fas fa-envelope"></i>
+                        <i class="fas fa-user"></i>
                         <div class="info">
-                            <div class="head">Email</div>
-                            <div class="sub-title"><a
-                                    href="https://mail.google.com/mail/u/0/#inbox?compose=new">yohanawishka2000326@gmail.com</a>
-                            </div>
+                            <div class="head">Name</div>
+                            <div class="sub-title">Yohan Awishka Indrawansha</div>
                         </div>
                     </div>
                     <div class="row">
@@ -386,6 +318,23 @@
                         </div>
                     </div>
                 </div>
+                <div class="column right">
+                    <div class="text">Message me</div>
+                    <form action="">
+
+                        <div class="inputBox">
+                            <input type="text" placeholder="name">
+                            <input type="email" placeholder="email">
+                        </div>
+            
+                        <input type="text" placeholder="subject" class="box">
+            
+                        <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
+            
+                        <input type="submit" class="btn" value="send message">
+            
+                    </form>
+                </div>
             </div>
             <div class="brow">
                 <div class="social">
@@ -406,10 +355,42 @@
         <span>Created By <a href="#">Yohan awishka</a> | <span class="far fa-copyright"></span> 2022 All rights
             reserved.</span>
     </footer>
+    <!-- typed.js link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 
-    <!-- java script-->
-    <script src="js.js"></script>
+    <!-- particles.js links  -->
+    <script src="Js/particles.min.js"></script>
+    <script src="Js/app.js"></script>
+    <script src="Js/js.js"></script>
+    <!-- vanilla-tilt.js link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 
+    <script>
+
+        let menu = document.querySelector('#menu-bars');
+        let header = document.querySelector('header');
+
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            header.classList.toggle('active');
+        }
+
+        window.onscroll = () => {
+            menu.classList.remove('fa-times');
+            header.classList.remove('active');
+        };
+
+        var typed = new Typed('.typing-text', {
+            strings: ['front end developer', 'web designer', 'graphic designer', 'web developer'],
+            loop: true,
+            typeSpeed: 150
+        });
+
+        VanillaTilt.init(document.querySelectorAll('.tilt'), {
+            max: 25
+        });
+
+    </script>
 </body>
 
 </html>
