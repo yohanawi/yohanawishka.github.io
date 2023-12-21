@@ -730,6 +730,7 @@ a {
     color: #444;
     padding: .5rem 0;
     font-size: 2.5rem;
+    margin-top: 15px;
 }
 
 .products-preview .preview .stars {
@@ -750,12 +751,14 @@ a {
     padding: 1rem 0;
     font-size: 1.6rem;
     color: #777;
+    text-align: justify;
 }
 
-.products-preview .preview .price {
+.products-preview .preview .tec {
     padding: 1rem 0;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: #27ae60;
+    text-align: left;
 }
 
 .products-preview .preview .buttons {
