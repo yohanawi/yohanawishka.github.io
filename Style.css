@@ -1,4 +1,3 @@
-/*  import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 
 :root {
@@ -37,7 +36,6 @@ html::-webkit-scrollbar-thumb {
 /* all similar content styling codes */
 section {
     padding: 2rem 9%;
-    min-height: 75vh;
 }
 
 .max-width {
@@ -47,7 +45,8 @@ section {
 }
 
 .about .about-content,
-.experience-content,
+.education .education-content,
+.experience .experience-content,
 .services .serv-content,
 .skills .skills-content,
 .contact .contact-content {
@@ -292,20 +291,21 @@ section .title::after {
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
 }
 
-.about .row .content {
+.about .row .about-content {
     flex: 1 1 75rem;
 }
 
-.about .row .content h3 {
+.about .row .about-content h3 {
     color: var(--white);
     font-size: 4rem;
 }
 
-.about .row .content h3 span {
+.about .row .about-content h3 span {
     color: var(--red);
+    font-size: 3rem;
 }
 
-.about .row .content .info {
+.about .row .about-content .info {
     color: var(--white);
     font-size: 1.7rem;
     padding: 1rem 0;
@@ -313,18 +313,18 @@ section .title::after {
     text-align: justify;
 }
 
-.about .row .content .box-container {
+.about .row .about-content .box-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
     padding: 1rem 0;
 }
 
-.about .row .content .box-container .box {
+.about .row .about-content .box-container .box {
     flex: 1 1 20rem;
 }
 
-.about .row .content .box-container .box p,
+.about .row .about-content .box-container .box p,
 a {
     font-size: 1.7rem;
     color: #fff;
@@ -332,11 +332,11 @@ a {
     line-height: 2;
 }
 
-.about .row .content .box-container .box a:hover {
+.about .row .about-content .box-container .box a:hover {
     color: var(--red);
 }
 
-.about .row .content .box-container .box p span {
+.about .row .about-content .box-container .box p span {
     color: var(--green);
 }
 
@@ -357,109 +357,142 @@ a {
     color: var(--white);
 }
 
-/* experince*/
-.experience {
+/*education section*/
+.education {
+    background-color: #2a2a2a;
     color: #ccc;
-    background-color: #202020;
 }
 
-.experience .title::before {
-    background: var(--white);
+.education .title::before {
+    background: #ccc;
 }
 
-.experience .title::after {
-    background: #202020;
-    content: "what i provided";
+.education .title::after {
+    content: "i am";
+    background-color: #2a2a2a;
 }
 
-.ex-container {
-    margin-top: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-.ex-container .post {
-    flex: 1 1 30rem;
-    border-radius: .5rem;
-    background: var(--white);
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-    padding: 2rem;
-}
-
-.ex-container .post .image img {
-    height: 20rem;
-    width: 100%;
-    border-radius: .5rem;
-    object-fit: cover;
-}
-
-.ex-container .post .content {
+.timeline {
+    max-width: 1080px;
+    margin: 50px auto;
     padding: 0 20px;
+    position: relative;
 }
 
-.ex-container .post .content .date {
-    margin: 10px 0;
-    font-size: 15px;
-    color: #666;
+.timeline .center-line {
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background: #ccc;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
 }
 
-.ex-container .post .content .title1 {
-    font-weight: 600;
-    font-size: 2.5rem;
-    color: #333;
-    text-transform: capitalize;
+.timeline .timeliner {
+    display: flex;
 }
 
-.ex-container .post:hover .title1 {
-    text-decoration: underline;
+.timeline .timeliner-1 {
+    justify-content: flex-start;
 }
 
-.ex-container .post .content p {
-    font-size: 1.5rem;
-    padding: .5rem 0;
-    color: #666;
-    text-align: justify;
+.timeline .timeliner-2 {
+    justify-content: flex-end;
 }
 
-.ex-container span {
-    font-size: 20px;
-    margin-right: 15px;
+.timeline .timeliner .sectiontime {
+    background: #ccc;
+    border-radius: 5px;
+    width: calc(50% - 40px);
+    padding: 20px;
+    position: relative;
 }
 
-.ex-container .post .content .btn-ex {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: .8rem 3rem;
-    background: var(--white);
+.timeline .timeliner .sectiontime::before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: #ccc;
+    top: 28px;
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+.timeliner-1 .sectiontime::before {
+    right: -7px;
+}
+
+.timeliner-2 .sectiontime::before {
+    left: -7px;
+}
+
+.timeliner .sectiontime .icon,
+.center-line .scroll-icon {
+    position: absolute;
+    background: #f2f2f2;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ff7979;
+    font-size: 17px;
+    box-shadow: 0 0 0 4px #ccc, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.center-line .scroll-icon {
+    bottom: 0px;
+    left: 50%;
+    font-size: 25px;
+    transform: translateX(-50%);
+}
+
+.timeliner-1 .sectiontime .icon {
+    top: 15px;
+    right: -60px;
+}
+
+.timeliner-2 .sectiontime .icon {
+    top: 15px;
+    left: -60px;
+}
+
+.timeliner .sectiontime .details,
+.timeliner .sectiontime .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.timeliner .sectiontime .details span {
     color: #111;
     font-size: 1.2rem;
-    cursor: pointer;
 }
 
-.ex-container .post .content .btn-ex:hover {
-    background: var(--red);
-    letter-spacing: .2rem;
-    color: var(--white);
+.timeliner .sectiontime .bottom img {
+    width: 25%;
+    margin-left: 150px;
 }
 
-@media (max-width: 500px) {
-    .ex-container {
-        text-align: center;
-    }
+.timeliner .sectiontime .details .titletime {
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+}
 
-    .ex-container img {
-        margin: auto;
-        float: none;
-        display: block;
-    }
+.timeliner .sectiontime p {
+    margin: 10px 0 17px 0;
+    color: #000;
+    font-size: 1.7rem;
+    text-align: center;
 }
 
 /* services section styling */
 .services {
     color: #ccc;
-    background: #2a2a2a;
-    height: 50px;
+    background: #202020;
 }
 
 .services .title::before {
@@ -467,7 +500,7 @@ a {
 }
 
 .services .title::after {
-    background: #2a2a2a;
+    background: #202020;
     content: "what i expert in";
 }
 
@@ -478,7 +511,7 @@ a {
 }
 
 .services .serv-content .card {
-    flex: 1 1 300px;
+    flex: 1 1 200px;
     background: rgb(48, 46, 46);
     text-align: center;
     border-radius: 6px;
@@ -487,7 +520,9 @@ a {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    height: 300px;
     z-index: 0;
+    margin-bottom: 25px;
 }
 
 .services .serv-content .card:hover {
@@ -557,10 +592,205 @@ a {
     color: var(--white);
 }
 
+/* experince*/
+.experience {
+    color: #ccc;
+    background-color: #2a2a2a;
+}
+
+.experience .title::before {
+    background: var(--white);
+}
+
+.experience .title::after {
+    background: #2a2a2a;
+    content: "what i provided";
+}
+
+.experience .products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.experience .ex-container {
+    flex: 1 1 30rem;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .1);
+    position: relative;
+    overflow: hidden;
+
+}
+
+.ex-container .post {
+    background: var(--white);
+    padding: 2rem;
+}
+
+.ex-container .post .image img {
+    height: 20rem;
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+.ex-container .post .content {
+    padding: 0 10px;
+}
+
+.ex-container .post .content .date {
+    margin: 10px 0;
+    font-size: 15px;
+    color: #666;
+}
+
+.ex-container .post .content .title1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.ex-container .post:hover .title1 {
+    text-decoration: underline;
+}
+
+.ex-container .post .content p {
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    color: #666;
+    text-align: justify;
+}
+
+.ex-container span {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.ex-container .post .content .btn-ex {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    background: var(--white);
+    color: #111;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.ex-container .post .content .btn-ex:hover {
+    background: var(--red);
+    letter-spacing: .2rem;
+    color: var(--white);
+}
+
+.products-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.products-preview .preview {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    margin: 2rem;
+    width: 40rem;
+}
+
+.products-preview .preview.active {
+    display: inline-block;
+}
+
+.products-preview .preview img {
+    height: 30rem;
+}
+
+.products-preview .preview .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    color: #444;
+    font-size: 4rem;
+}
+
+.products-preview .preview .fa-times:hover {
+    transform: rotate(90deg);
+}
+
+.products-preview .preview h3 {
+    color: #444;
+    padding: .5rem 0;
+    font-size: 2.5rem;
+}
+
+.products-preview .preview .stars {
+    padding: 1rem 0;
+    font-size: 1.7rem;
+}
+
+.products-preview .preview .stars i {
+    color: #27ae60;
+}
+
+.products-preview .preview .stars span {
+    color: #999;
+}
+
+.products-preview .preview p {
+    line-height: 1.5;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: #777;
+}
+
+.products-preview .preview .price {
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    color: #27ae60;
+}
+
+.products-preview .preview .buttons {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.products-preview .preview .buttons a {
+    flex: 1 1 16rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: #444;
+    border: .1rem solid #444;
+}
+
+.products-preview .preview .buttons a.cart {
+    background: #444;
+    color: #fff;
+}
+
+.products-preview .preview .buttons a.cart:hover {
+    background: #111;
+}
+
+.products-preview .preview .buttons a.buy:hover {
+    background: #444;
+    color: #fff;
+}
+
 /*coding activity*/
 .activity {
     color: #ccc;
-    background: #2a2a2a;
+    background: #202020;
 }
 
 .activity .title::before {
@@ -568,7 +798,7 @@ a {
 }
 
 .activity .title::after {
-    background: #2a2a2a;
+    background: #202020;
 }
 
 .activity .title::after {
@@ -583,7 +813,7 @@ a {
 /* works section styling */
 .works {
     color: #ccc;
-    background: #202020;
+    background: #2a2a2a;
 }
 
 .works .title::before {
@@ -646,7 +876,7 @@ a {
 /* contact section styling */
 .contact {
     color: #ccc;
-    background-color: #2a2a2a;
+    background-color: #202020;
 }
 
 .contact .title::before {
@@ -794,7 +1024,7 @@ a {
 
 /* footer section styling */
 footer {
-    background: #202020;
+    background: #2a2a2a;
     padding: 15px 23px;
     color: var(--white);
     text-align: center;
@@ -803,12 +1033,12 @@ footer {
 footer span a {
     color: var(--red);
     text-decoration: none;
+    font-size: 11px;
 }
 
 footer span a:hover {
     text-decoration: underline;
 }
-
 
 /* responsive media query start */
 @media (max-width: 1104px) {
@@ -960,4 +1190,78 @@ footer span a:hover {
         font-size: 23px;
         line-height: 38px;
     }
+}
+
+@media(max-width: 790px) {
+    .timeline .center-line {
+        left: 40px;
+    }
+
+    .timeline .timeliner {
+        margin: 30px 0 3px 60px;
+    }
+
+    .timeline .timeliner .sectiontime {
+        width: 100%;
+    }
+
+    .timeliner-1 .sectiontime::before {
+        left: -7px;
+    }
+
+    .timeliner-1 .sectiontime .icon {
+        left: -60px;
+    }
+}
+
+@media(max-width: 440px) {
+
+    .timeline .center-line,
+    .timeliner .sectiontime::before,
+    .timeliner .sectiontime .icon {
+        display: none;
+    }
+
+    .timeline .timeliner {
+        margin: 10px 0;
+    }
+}
+
+
+
+
+@media (max-width: 500px) {
+    .ex-container {
+        text-align: center;
+    }
+
+    .ex-container img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+}
+
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .products-preview .preview img {
+        height: 25rem;
+    }
+
+}
+
+@media (max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+
 }
