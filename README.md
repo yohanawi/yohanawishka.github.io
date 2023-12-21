@@ -40,7 +40,7 @@ This repository contains a personal portfolio website showcasing your skills, ex
 
 ### Demo
 
-https://yohanawishka.herokuapp.com/
+https://yohanawishka.netlify.app/
 
 ### Authors
 
