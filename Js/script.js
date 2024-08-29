@@ -95,3 +95,36 @@ previewBox.forEach(close => {
         preveiwContainer.style.display = 'none';
     };
 });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const progressBars = [
+        { element: document.querySelector('.circular-progress1'), endValue: 80 },
+        { element: document.querySelector('.circular-progress2'), endValue: 90 },
+        { element: document.querySelector('.circular-progress3'), endValue: 60 },
+        { element: document.querySelector('.circular-progress4'), endValue: 75 },
+        { element: document.querySelector('.circular-progress5'), endValue: 40 },
+        { element: document.querySelector('.circular-progress6'), endValue: 75 }
+    ];
+
+    progressBars.forEach(progressBar => {
+        const { element, endValue } = progressBar;
+        const valueContainer = element.querySelector('.value-container');
+
+        let progressValue = 0;
+        let speed = 30;
+
+        let interval = setInterval(() => {
+            progressValue++;
+            valueContainer.textContent = `${progressValue}%`;
+            element.style.background = `conic-gradient(
+            #dc143c ${progressValue * 3.6}deg,
+            #cccccc ${progressValue * 3.6}deg
+        )`;
+            if (progressValue === endValue) {
+                clearInterval(interval);
+            }
+        }, speed);
+    });
+});
